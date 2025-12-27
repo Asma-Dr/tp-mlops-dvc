@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python train.py
+    deps:
+    - path: data/iris.csv
+      hash: md5
+      md5: bf6c5b821b3ca662304cceabd408711d
+      size: 2795
+    - path: train.py
+      hash: md5
+      md5: fca29eb56573393b14e5e699c2585196
+      size: 672
+    outs:
+    - path: model.pkl
+      hash: md5
+      md5: 35cd1d27ee8656b89b67fab2a88feaa6
+      size: 157617
