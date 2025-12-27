@@ -23,6 +23,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install pandas scikit-learn dvc mlflow
 
+      - name: Generate dataset
+        run: |
+          python generate_iris.py
+
       - name: Run DVC pipeline
         run: |
           dvc repro
+
